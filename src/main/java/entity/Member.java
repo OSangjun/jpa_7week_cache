@@ -2,7 +2,8 @@ package entity;
 
 import javax.persistence.*;
 
-@Cacheable
+//@Cacheable
+@NamedQuery(name="findTeenager", query="select m from Member m where age >= 10 and age < 20")
 @Table(name="MEMBER")
 @Entity
 public class Member {
