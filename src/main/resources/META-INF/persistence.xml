@@ -1,21 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence" version="2.1">
-
     <persistence-unit name="l2test">
 
-        <!--        2차 Cache 사용 모드          -->
-        <!--        ALL                         -->
-        <!--        NONE                        -->
-        <!--        ENABLE_SELECTIVE            -->
-        <!--        DISABLE_SELECTIVE           -->
-        <!--        UNSPECIFIED                 -->
         <shared-cache-mode>ENABLE_SELECTIVE</shared-cache-mode>
 
         <properties>
-            <!-- Cache -->
-            <property name="hibernate.cache.use_second_level_cache" value="true"/>
-            <property name="hibernate.cache.region.factory_class" value="org.hibernate.cache.ehcache.EhCacheRegionFactory"/>
-            <property name="hibernate.generate_statistics" value="false"/>
             <!-- 필수 속성 -->
             <property name="javax.persistence.jdbc.driver" value="org.h2.Driver"/>
             <property name="javax.persistence.jdbc.user" value="sa"/>
@@ -28,6 +17,10 @@
             <property name="hibernate.use_sql_comments" value="true" />
             <property name="hibernate.id.new_generator_mappings" value="true" />
             <property name="hibernate.hbm2ddl.auto" value="update" />
+            <!-- Cache -->
+            <property name="hibernate.cache.use_second_level_cache" value="true"/>
+            <property name="hibernate.cache.region.factory_class" value="org.hibernate.cache.ehcache.EhCacheRegionFactory"/>
+            <property name="hibernate.generate_statistics" value="false"/>
         </properties>
     </persistence-unit>
 </persistence>

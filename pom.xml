@@ -24,6 +24,11 @@
             <artifactId>hibernate-entitymanager</artifactId>
             <version>5.4.18.Final</version>
         </dependency>
+        <dependency>
+            <groupId>org.ehcache</groupId>
+            <artifactId>ehcache</artifactId>
+            <version>3.8.1</version>
+        </dependency>
     </dependencies>
 
 

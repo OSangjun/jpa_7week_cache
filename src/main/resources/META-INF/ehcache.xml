@@ -1,0 +1,29 @@
+<ehcache>
+    <diskStore path="java.io.tmpdir"/>
+
+    <!-- default Cache 설정 (필수) -->
+    <defaultCache
+            maxElementsInMemory="10000"
+            eternal="false"
+            timeToIdleSeconds="120"
+            timeToLiveSeconds="120"
+            overflowToDisk="true"
+            maxElementsOnDisk="10000000"
+            diskPersistent="false"
+            diskExpiryThreadIntervalSeconds="120"
+            memoryStoreEvictionPolicy="LRU"
+    />
+
+    <!-- 별도 캐시 단위 설정 -->
+    <cache name="etc"
+           eternal="false"
+           timeToIdleSeconds="0"
+           timeToLiveSeconds="1200"
+           overflowToDisk="false"
+           diskPersistent="false"
+           diskExpiryThreadIntervalSeconds="120"
+           memoryStoreEvictionPolicy="LRU">
+    </cache>
+
+
+</ehcache>

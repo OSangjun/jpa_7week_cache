@@ -13,6 +13,13 @@ public class Member {
     @Column(name="AGE")
     private Integer age;
 
+    @Column(name="TEAM_NAME")
+    String teamName;
+
+    public void setTeamName(String teamName) {
+        this.teamName = teamName;
+    }
+
     public String getName() {
         return name;
     }
@@ -27,6 +34,10 @@ public class Member {
 
     public void setAge(Integer age) {
         this.age = age;
+    }
+
+
+    public Member() {
     }
 
     @Override
